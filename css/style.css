@@ -29,7 +29,9 @@ a {
     text-decoration: none; }
   a.more {
     font-weight: 600; }
-
+    .bg-primary {
+      background-color: rgb(240 224 213) !important;
+  }
 .custom-navbar {
   background: #f0e0d5 !important;
   padding-top: 20px;
@@ -64,7 +66,7 @@ a {
         bottom: 0;
         left: 8px;
         right: 8px;
-        background: #f9bf29;
+        background: #f69dbb;
         height: 5px;
         opacity: 1;
         visibility: visible;
@@ -163,13 +165,14 @@ a {
   font-weight: 600;
   padding: 12px 30px;
   border-radius: 30px;
-  color: #ffffff;
-  background: #2f2f2f;
-  border-color: #2f2f2f; }
+  color: #000000;
+  background: #6cdef3;
+  border-color: #6cdef3;
+ }
   .btn:hover {
-    color: #ffffff;
-    background: #222222;
-    border-color: #222222; }
+    color: #000;
+    background: #42defb;
+    border-color: #42defb; }
   .btn:active, .btn:focus {
     outline: none !important;
     -webkit-box-shadow: none;
@@ -182,11 +185,11 @@ a {
       border-color: #314d43; }
   .btn.btn-secondary {
     color: #2f2f2f;
-    background: #f9bf29;
-    border-color: #f9bf29; }
+    background: #f69dbb;
+    border-color: #f69dbb; }
     .btn.btn-secondary:hover {
-      background: #f8b810;
-      border-color: #f8b810; }
+      background: #ee709b;
+      border-color: #ee709b; }
   .btn.btn-white-outline {
     background: transparent;
     border-width: 2px;
@@ -204,16 +207,24 @@ a {
     text-align: center;
     text-decoration: none;
     display: block;
+    padding: 25px 10px;
     position: relative;
     padding-bottom: 50px;
-    cursor: pointer; }
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
     .product-section .product-item .product-thumbnail {
       margin-bottom: 30px;
       position: relative;
       top: 0;
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
-      transition: .3s all ease; }
+      transition: .3s all ease; 
+      height: 200px;
+      object-fit: contain;
+      object-position: center;
+    }
     .product-section .product-item h3 {
       font-weight: 600;
       font-size: 16px; }
@@ -471,7 +482,7 @@ a {
       right: 0; }
   .testimonial-slider-wrap .tns-nav {
     position: absolute;
-    bottom: -50px;
+    bottom: -15px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -509,7 +520,7 @@ a {
   padding: 7rem 0 12rem 0 !important; }
 
 .blog-section {
-  padding: 7rem 0 12rem 0; }
+  padding: 4rem 0 4rem 0; }
   .blog-section .post-entry a {
     text-decoration: none; }
   .blog-section .post-entry .post-thumbnail {
@@ -538,17 +549,17 @@ a {
 .footer-section {
   padding: 80px 0;
   padding-bottom: 15px;
-  background: #ffffff; }
+  background: #3a3a3a; }
   .footer-section .relative {
     position: relative; }
   .footer-section a {
     text-decoration: none;
-    color: #2f2f2f;
+    color: #fff;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease; }
     .footer-section a:hover {
-      color: rgba(47, 47, 47, 0.5); }
+      opacity: 0.6; }
   .footer-section .subscription-form {
     margin-bottom: 40px;
     position: relative;
@@ -611,14 +622,15 @@ a {
       text-align: center;
       line-height: 40px;
       display: inline-block;
-      background: #dce5e4;
-      color: #3b5d50;
-      border-radius: 50%; }
+      background: #f59cbb;
+      color: #000000;
+      border-radius: 50%;
+  }
       .footer-section .custom-social li a:hover {
-        background: #3b5d50;
-        color: #ffffff; }
+        background: #ee709b;
+        }
   .footer-section .border-top {
-    border-color: #dce5e4; }
+    border-color: #747474 !important; }
     .footer-section .border-top.copyright {
       font-size: 14px !important; }
 
@@ -720,6 +732,8 @@ textarea {
   position: relative;
   margin-bottom: 20px;
   width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .product-collection .product-entry {
   position: absolute;
@@ -733,7 +747,7 @@ textarea {
   text-transform: uppercase;
 }
 .product-collection .product-entry h3.item-title {    
-  font-size: 4.4em;
+  font-size: 3.5em;
   line-height: 1;
   font-weight: 900;
 }
@@ -741,7 +755,7 @@ textarea {
   width: 80%;
 }
 .product-collection .right-content h3.item-title {
-  font-size: 3.2em;
+  font-size: 2.5em;
   width: 80%;
   margin: 0;
 }
@@ -806,5 +820,114 @@ img.brand-image {
     max-width: 100%;
     height: auto;
     margin: 20px;
+}
+
+.top-discount-area .single-discount-area {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 40px 15px;
+  background-color: #6cdef3;
+  text-align: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.top-discount-area .single-discount-area:nth-child(2) {
+  background-color: #f69dbb;
+}
+
+.top-discount-area .single-discount-area:last-child {
+  background-color: #c3bebb;
+}
+
+.top-discount-area .single-discount-area h5 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.top-discount-area .single-discount-area h6,
+.top-discount-area .single-discount-area a {
+  font-size: 12px;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.section-title {
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+.section-title h2{
+  font-weight: bold;
+}
+
+/*---------------------
+  Instagram
+-----------------------*/
+
+.instagram__item {
+	height: 320px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+  background-size: cover;
+  background-position: center center;
+}
+
+.instagram__item:hover:after {
+	opacity: 1;
+}
+
+.instagram__item:hover .instagram__text {
+	opacity: 1;
+	visibility: visible;
+}
+
+.instagram__item:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: rgb(246 157 187 / 80%);
+	content: "";
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.instagram__text {
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.instagram__text i {
+	font-size: 30px;
+	color: #0d0d0d;
+}
+
+.instagram__text a {
+	font-size: 16px;
+	color: #0d0d0d;
+	font-weight: 500;
+	display: block;
+	margin-top: 10px;
 }
 
